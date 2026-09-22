@@ -1,0 +1,45 @@
+{
+    "name": "smart-face-attendance",
+    "productName": "Smart Attendance System",
+    "version": "1.0.0",
+    "description": "Smart Face Recognition Attendance System",
+    "main": "dist/main/main.js",
+    "scripts": {
+        "start": "npm run build && electron .",
+        "dev": "tsc -p tsconfig.json && concurrently \"vite\" \"tsc -w -p tsconfig.json\" \"electronmon .\"",
+        "build": "tsc -p tsconfig.json && vite build",
+        "clean": "rimraf dist"
+    },
+    "keywords": [
+        "electron",
+        "face-api",
+        "attendance",
+        "mysql"
+    ],
+    "author": "Antigravity",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "electron-store": "^8.2.0",
+        "face-api.js": "^0.22.2",
+        "mysql2": "^3.9.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.22.3",
+        "webcam-easy": "^1.1.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.24",
+        "@types/react": "^18.2.61",
+        "@types/react-dom": "^18.2.19",
+        "@vitejs/plugin-react": "^4.2.1",
+        "concurrently": "^8.2.2",
+        "electron": "^29.1.0",
+        "electron-builder": "^24.13.3",
+        "electron-squirrel-startup": "^1.0.1",
+        "electronmon": "^2.0.2",
+        "rimraf": "^5.0.5",
+        "typescript": "^5.3.3",
+        "vite": "^5.1.4"
+    }
+}
